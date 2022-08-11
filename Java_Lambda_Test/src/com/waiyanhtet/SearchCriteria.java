@@ -6,7 +6,7 @@ import java.util.function.Predicate;
 
 public class SearchCriteria {
 
-	private final Map<String, Predicate<Person>> searchMap = new HashMap<>();
+	private final Map<String, Predicate<Player>> searchMap = new HashMap<>();
 	
 	private SearchCriteria() {
 		initSeachMap();
@@ -18,9 +18,9 @@ public class SearchCriteria {
 		searchMap.put("allBackPlayer", p -> p.getPosition() == "CB");
 	}
 	
-	public Predicate<Person> getCriteria(String predicateName){
+	public Predicate<Player> getCriteria(String predicateName){
 		
-		Predicate<Person> target = searchMap.get(predicateName);
+		Predicate<Player> target = searchMap.get(predicateName);
 		if(target == null ) {
 			System.out.println("Search creteria not found");
 			System.exit(1);

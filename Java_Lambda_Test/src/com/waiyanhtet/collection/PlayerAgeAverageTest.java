@@ -2,18 +2,18 @@ package com.waiyanhtet.collection;
 
 import java.util.List;
 
-import com.waiyanhtet.Person;
+import com.waiyanhtet.Player;
 import com.waiyanhtet.SearchCriteria;
 
 public class PlayerAgeAverageTest {
 
 	public static void main(String[] args) {
-		List<Person> playerList = Person.createPersonList();
+		List<Player> playerList = Player.createPlayerList();
 		SearchCriteria search = SearchCriteria.getInstance();
 
 		int totalAge = 0;
 		int count = 0;
-		for (Person player : playerList) {
+		for (Player player : playerList) {
 			if (isAttacker(player)) {
 				totalAge += player.getAge();
 				++count;
@@ -38,21 +38,21 @@ public class PlayerAgeAverageTest {
 
 	}
 
-	public static boolean isAttacker(Person player) {
+	public static boolean isAttacker(Player player) {
 		if (player.getPosition() == "ST") {
 			return true;
 		}
 		return false;
 	}
 
-	public static boolean isMidfielder(Person player) {
+	public static boolean isMidfielder(Player player) {
 		if (player.getPosition() == "DM") {
 			return true;
 		}
 		return false;
 	}
 
-	public static boolean isBack(Person player) {
+	public static boolean isBack(Player player) {
 		if (player.getPosition() == "CB") {
 			return true;
 		}

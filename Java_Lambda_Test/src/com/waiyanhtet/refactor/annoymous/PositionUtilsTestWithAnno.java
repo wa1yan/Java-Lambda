@@ -2,13 +2,13 @@ package com.waiyanhtet.refactor.annoymous;
 
 import java.util.List;
 
-import com.waiyanhtet.Person;
+import com.waiyanhtet.Player;
 
 public class PositionUtilsTestWithAnno {
 
 	public static void main(String[] args) {
 		
-		List<Person> playerList = Person.createPersonList();
+		List<Player> playerList = Player.createPlayerList();
 		
 		PositionUtils positionUtils = new PositionUtils();
 		
@@ -16,7 +16,7 @@ public class PositionUtilsTestWithAnno {
 		positionUtils.attacker(playerList, new PositionChoose() {
 			
 			@Override
-			public boolean choose(Person player) {
+			public boolean choose(Player player) {
 				return player.getPosition() == "ST";
 			}
 		});
@@ -25,7 +25,7 @@ public class PositionUtilsTestWithAnno {
 		positionUtils.midfielder(playerList, new PositionChoose() {
 			
 			@Override
-			public boolean choose(Person player) {
+			public boolean choose(Player player) {
 				return player.getPosition() == "DM";
 			}
 		});
@@ -34,7 +34,7 @@ public class PositionUtilsTestWithAnno {
 		positionUtils.backPlayer(playerList, new PositionChoose() {
 			
 			@Override
-			public boolean choose(Person player) {
+			public boolean choose(Player player) {
 				return player.getPosition() == "CB";
 			}
 		});

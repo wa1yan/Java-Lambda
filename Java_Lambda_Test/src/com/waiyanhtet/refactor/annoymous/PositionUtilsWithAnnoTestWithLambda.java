@@ -2,12 +2,12 @@ package com.waiyanhtet.refactor.annoymous;
 
 import java.util.List;
 
-import com.waiyanhtet.Person;
+import com.waiyanhtet.Player;
 
 public class PositionUtilsWithAnnoTestWithLambda {
 
 	public static void main(String[] args) {
-		List<Person> playerList = Person.createPersonList();
+		List<Player> playerList = Player.createPlayerList();
 		
 		PositionUtils positionUtils = new PositionUtils();
 		

@@ -1,8 +1,8 @@
 package com.waiyanhtet.refactor.annoymous;
 
-import com.waiyanhtet.Person;
+import com.waiyanhtet.Player;
 
 public interface PositionChoose {
 
-	boolean choose(Person p);
+	boolean choose(Player p);
 }

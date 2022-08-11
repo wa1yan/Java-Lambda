@@ -2,18 +2,18 @@ package com.waiyanhtet.function;
 
 import java.util.function.Function;
 
-import com.waiyanhtet.Person;
+import com.waiyanhtet.Player;
 
 public class FunctionTest {
 
 	public static void main(String[] args) {
-		var playerlist = Person.createPersonList();
+		var playerlist = Player.createPlayerList();
 		
-		Function<Person, String> printdata = p -> {
+		Function<Player, String> printdata = p -> {
 			return "Name : %s \nAge :  %d \nPosition :  %s\n".formatted(p.getName(),p.getAge(),p.getPosition());
 		};
 		
-		for (Person player : playerlist) {
+		for (Player player : playerlist) {
 			System.out.println(player.customPrint(printdata));
 		}
 
